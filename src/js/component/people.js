@@ -1,13 +1,32 @@
 import React from "react";
 
 export const People = (props) => {
-	return (
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://loremflickr.com/320/240/LukeSkywalker" alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title">Luke Skywalker</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Learn More</a>
+  return (
+    <div className="col">
+
+      <div className="card" style={{ width: "18rem" }}>
+      <img
+        className="card-img-top"
+        src={"https://loremflickr.com/320/240/" + props.item}
+        alt="Card image cap"
+      />
+      <div className="card-body">
+        <h5 className="card-title">{props.item}</h5>
+        <p className="card-text">
+        The key element that defines the Star Wars universe is the Force. The Force comes in two flavors: Light Side (good) and Dark Side (bad).
+        </p>
+        <div className="navbar"> 
+          <a href="#" className="btn btn-primary">
+            Learn More
+          </a>
+          <button className="btn btn-primary">
+            <i className="fa-regular fa-heart"></i>
+          </button>
         </div>
-        );
-    };
+        
+      </div>
+    </div>
+    </div>
+    
+  );
+};
