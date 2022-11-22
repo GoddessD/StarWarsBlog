@@ -6,6 +6,9 @@ export const Navbar = () => {
 		<nav class="navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand">StarWars Blog</a>
+    <Link to="/people">People</Link>
+    <Link to="/people">Planets</Link>
+    <Link to="/people">Vehicles</Link>
     <form class="d-flex" role="search">
 	<div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
