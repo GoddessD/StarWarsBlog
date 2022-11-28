@@ -6,14 +6,18 @@ export const Planets = (props) => {
       <div className="card" style={{ width: "18rem" }}>
         <img
           className="card-img-top"
-          src={"https://loremflickr.com/320/240/" + props.item}
+          src={"https://loremflickr.com/320/240/" + props.planet.name}
           alt="Card image cap"
         />
         <div className="card-body">
-        <h5 className="card-title">{props.item}</h5>
+        <h5 className="card-title">{props.planet.name}</h5>
           <p className="card-text">
-          The Star Wars galaxy contains several broad sub-regions within the Legends galactic map.
-As a general rule, most of the galaxy's wealth, power, and population are concentrated near the middle of the galactic circle – the "Core Worlds".</p>
+          Population: {props.planet.population}
+         </p>
+         <p className="card-text">
+          Terrain: {props.planet.terrain}
+         </p>
+         
           <div className="navbar">
             <a href="#" className="btn btn-primary">
               Learn More

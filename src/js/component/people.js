@@ -7,13 +7,19 @@ export const People = (props) => {
       <div className="card" style={{ width: "18rem" }}>
       <img
         className="card-img-top"
-        src={"https://loremflickr.com/320/240/" + props.item}
+        src={"https://loremflickr.com/320/240/" + props.character.name}
         alt="Card image cap"
       />
       <div className="card-body">
-        <h5 className="card-title">{props.item}</h5>
+        <h5 className="card-title">{props.character.name}</h5>
         <p className="card-text">
-        The key element that defines the Star Wars universe is the Force. The Force comes in two flavors: Light Side (good) and Dark Side (bad).
+            Gender: {props.character.gender}
+        </p>
+        <p className="card-text">
+            Hair Color: {props.character.hair_color}
+        </p>
+        <p className="card-text">
+            Eye Color: {props.character.eye_color}
         </p>
         <div className="navbar"> 
           <a href="#" className="btn btn-primary">

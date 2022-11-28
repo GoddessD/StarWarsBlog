@@ -12,24 +12,18 @@ export const Navbar = () => {
             <button
               class="btn btn-secondary dropdown-toggle"
               type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Favorites
+              <div className="mx-2 bg-warning rounded">
+               
+              </div>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
-                Another action
-              </a>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              {/* <li>{favList}</li> */}
+            </ul>
           </div>
         </form>
       </div>

@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 
 export const DetailedPeople = () => {
   const params = useParams()
-  const People = params.People 
+ 
     return (
     <div>
       <div>
