@@ -12,21 +12,21 @@ export const Home = () => {
     <div className="mb-5">
       <h2 className="text-danger text-start"> People</h2>
       <div className="row datascroll">
-       {store.people.map((item,index)=>(<People character={item} index={index} />))}
+       {store.people.map((item,index)=>(<People character={item} index={index} addToFavorites={actions.addToFavorites}/>))}
       </div>
     </div>
 
     <div className="mb-5">
       <h2 className="text-danger text-start"> Planets</h2>
       <div className="row datascroll">
-      {store.planets.map((item,index)=>(<Planets planet={item} index={index} />))}
+      {store.planets.map((item,index)=>(<Planets planet={item} index={index} addToFavorites={actions.addToFavorites}/>))}
       </div>
     </div>
 
     <div className="mb-5">
       <h2 className="text-danger text-start"> Vehicles</h2>
       <div className="row datascroll">
-      {/* {vehicles.map((item,index)=>(<Vehicles item={item} index={index} />))} */}
+      {store.vehicles.map((item,index)=>(<Vehicles vehicle={item} index={index} addToFavorites={actions.addToFavorites} />))}
       </div>
     </div>
   </div>

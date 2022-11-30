@@ -4,6 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       people: [],
       planets: [],
+      vehicles: [],
+      favorites: [],
       
     },
     actions: {
@@ -18,8 +20,25 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((res) => res.json())
 
           .then((data) => setStore({ planets: data.results }));
-    }
-  }}
-};
+    },
+      getVehicles: () => {
+        fetch(apiUrl + "vehicles")
+        .then((res) => res.json())
+
+        .then((data) => setStore({ vehicles: data.results }));
+      },
+      addToFavorites: (newFavorite) => {
+          let store = getStore()
+          store.favorites.push(newFavorite)
+          setStore(store)
+      },
+    // delete items from favorites
+    deleteFavorites: (index) => {
+      let store = getStore()
+      let newFavorites = store.favorites.filter((item,idx)=> idx !=index) 
+      setStore({ favorites: newFavorites })
+  }} 
+}
+}
 //
 export default getState;

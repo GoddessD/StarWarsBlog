@@ -25,7 +25,7 @@ export const People = (props) => {
           <a href="#" className="btn btn-primary">
             Learn More
           </a>
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={() => props.addToFavorites(props.character.name)}>
             <i className="fa-regular fa-heart"></i>
           </button>
         </div>
