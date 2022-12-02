@@ -1,9 +1,10 @@
-import React from "react";
+import React,{useContext} from "react";
 import { useParams } from "react-router";
-
+import {Context} from "../store/appContext"
 export const DetailedPeople = () => {
   const params = useParams()
- 
+  const {store,actions} = useContext(Context)
+ const character = store.people.filter((item,index) =>index == params['index'])[0]
     return (
     <div>
       <div>
@@ -11,7 +12,7 @@ export const DetailedPeople = () => {
           <img />
         </div>
         <div>
-          <h3></h3>
+          <h3>{character.name}</h3>
           <p> </p>
         </div>
       </div>
