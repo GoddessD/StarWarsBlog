@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <nav class="navbar bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand">StarWars Blog</a>
+        <a class="navbar-brand"><img className="h-25 w-25" src="https://loodibee.com/wp-content/uploads/Star-Wars-transparent-logo.png" /></a>
 
         <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
