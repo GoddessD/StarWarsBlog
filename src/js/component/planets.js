@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 export const Planets = (props) => {
   return (
     <div className="col">
@@ -19,9 +19,10 @@ export const Planets = (props) => {
          </p>
          
           <div className="navbar">
+            <Link to={'/planets/' + props.index}>
             <a href="#" className="btn btn-primary">
               Learn More
-            </a>
+            </a></Link>
             <button className="btn btn-primary" onClick={() => props.addToFavorites(props.planet.name)}>
               <i className="fa-regular fa-heart"></i>
             </button>

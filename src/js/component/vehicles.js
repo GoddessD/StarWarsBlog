@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 export const Vehicles = (props) => {
   return (
     <div className="col">
@@ -22,9 +22,10 @@ export const Vehicles = (props) => {
           </p>
 
           <div className="navbar">
+            <Link to={'/vehicles/' + props.index}>
             <a href="#" className="btn btn-primary">
               Learn More
-            </a>
+            </a></Link>
              <button className="btn btn-primary" onClick={() => props.addToFavorites(props.vehicle.name)}>
               <i className="fa-regular fa-heart"></i>
             </button>

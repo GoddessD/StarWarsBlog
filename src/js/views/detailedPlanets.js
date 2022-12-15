@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useContext} from "react";
 import { useParams } from "react-router";
 import { Context } from "../store/appContext";
 export const DetailedPlanets = () => {
   const params = useParams();
   const { store, actions } = useContext(Context);
-  const planet = store.planet.filter(
+  const planet = store.planets.filter(
     (item, index) => index == params.index
   )[0];
   return (

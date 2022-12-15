@@ -1,10 +1,10 @@
-import React from "react";
-import { useParams } from "react-router";
+import React,{useContext} from "react";
+import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext"
 export const DetailedVehicles = () => {
   const params = useParams();
   const { store, actions } = useContext(Context);
-  const vehicles = store.vehicle.filter(
+  const vehicle = store.vehicles.filter(
     (item, index) => index == params.index
   )[0];
   return (
@@ -16,7 +16,7 @@ export const DetailedVehicles = () => {
       <div className="d-flex border-bottom text-center">
         <img
           className="w-50"
-          src={"https://loremflickr.com/800/600/" + vehicles.name}
+          src={"https://loremflickr.com/800/600/" + vehicle.name}
         />
 
         <div>

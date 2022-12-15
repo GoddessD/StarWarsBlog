@@ -5,18 +5,20 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand"><img className="h-25 w-25" src="https://loodibee.com/wp-content/uploads/Star-Wars-transparent-logo.png" /></a>
+    <nav className="navbar bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand"><img className="logo" src="https://loodibee.com/wp-content/uploads/Star-Wars-transparent-logo.png" /></a>
 
-        <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></form>
+        <form className="form-inline my-2 my-lg-0">
+          <div className="d-flex">
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></div></form>
+     
 
-        <form class="d-flex" role="search">
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
+        <form className="d-flex" role="search">
+          <div className="dropdown">
+            <button 
+              className="btn btn-secondary dropdown-toggle d-flex"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -27,9 +29,9 @@ export const Navbar = () => {
                 ({store.favorites.length})
               </div>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               {store.favorites.map((item, index) => {
-                return <li key={index}>{item} <i class="fa-regular fa-trash-can" onClick={() =>actions.deleteFavorites(index)}></i></li>;
+                return <li key={index}>{item} <i className="fa-regular fa-trash-can" onClick={() =>actions.deleteFavorites(index)}></i></li>;
               })}
             </ul>
           </div>
